@@ -57,4 +57,11 @@ public class StudentController {
 		return ResponseEntity.ok().build();
 	}
 
+	@GetMapping("/getAllStudents")
+	public List<Students> getAllStudents()
+	{
+		List<Students> getAllStudent = studentService.getAllStudent();
+		return getAllStudent;
+	}
+
 }

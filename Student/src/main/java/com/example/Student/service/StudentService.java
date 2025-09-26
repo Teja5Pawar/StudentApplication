@@ -32,4 +32,9 @@ public class StudentService {
 		studentRepository.deleteById(rollNo);
 	}
 
+	public List<Students> getAllStudent() {
+		
+		return studentRepository.findAll();
+	}
+
 }
