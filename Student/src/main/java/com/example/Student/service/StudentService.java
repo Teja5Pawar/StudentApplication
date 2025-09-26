@@ -37,4 +37,9 @@ public class StudentService {
 		return studentRepository.findAll();
 	}
 
+	public Students getStudent(Integer rollNo)
+	{
+		return studentRepository.findAll(rollNo);
+	}
+
 }

@@ -64,4 +64,11 @@ public class StudentController {
 		return getAllStudent;
 	}
 
+	@GetMapping("/getStudent/{rollNo}")
+	public Students getStudent(@PathVariable("rollNo") Integer rollNo)
+	{
+		Students getStudent = studentService.getStudent(rollNo);
+		return getStudent;
+	}
+
 }
