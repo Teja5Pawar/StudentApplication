@@ -39,7 +39,8 @@ public class StudentService {
 
 	public Students getStudent(Integer rollNo)
 	{
-		return studentRepository.findAll(rollNo);
+		Optional<Students> student = studentRepository.findById(rollNo);
+        return student.orElse(null);
 	}
 
 }
